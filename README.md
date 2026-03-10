@@ -1,2 +1,15 @@
 # Personal-Finance-Tracker
-Simple Python application to add and view transactions over a period of time. A CSV file is created and manipulated as a database.
+
+A modular Python application for tracking income and expenses, storing transactions, filtering by date range, summarizing totals, and visualizing financial trends over time.
+
+## Features
+- Add income and expense transactions
+- Store transactions in CSV format
+- View transactions within a date range
+- Calculate total income, expenses, and net savings
+- Plot daily income and expense trends
+
+## Tech Stack
+- Python
+- pandas
+- matplotlib
