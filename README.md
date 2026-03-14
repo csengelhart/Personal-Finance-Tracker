@@ -8,6 +8,7 @@ A modular Python application for tracking income and expenses, storing transacti
 - View transactions within a date range
 - Calculate total income, expenses, and net savings
 - Plot daily income and expense trends
+- Plot income vs expense breakdown
 
 ## Tech Stack
 - Python
