@@ -53,7 +53,7 @@ def get_menu_choice(options: dict ,prompt: str):
     print("Invalid option. Please enter a valid option")
     return get_menu_choice(options,prompt)
 
-def get_subcategory(category):
+def get_subcategory(category: str):
     if category == "Income":
         subcategory = get_menu_choice(INCOME_SUBCATEGORIES,"Select an income subcategory")
     elif category == "Expense":
