@@ -1,7 +1,7 @@
-from data_entry import get_description, get_date, get_amount, get_category
+from data_entry import get_description, get_date, get_amount, get_category, get_subcategory
 from app.storage import initialize_csv, add_entry
 from app.report import get_transactions, print_transactions_summary
-from app.plotting import plot_transactions
+from app.plotting import plot_transactions, plot_transactions_subcategories
 
 def add_transaction() -> None:
     date = get_date(
@@ -10,9 +10,12 @@ def add_transaction() -> None:
     )
     amount = get_amount()
     category = get_category()
+    subcategory = get_subcategory(category)
     description = get_description()
-    add_entry(date, amount, category, description)
+    add_entry(date, amount, category, subcategory, description)
     print("Successfully added entry.")
+
+
 
 def main() -> None:
     initialize_csv()
@@ -40,6 +43,7 @@ def main() -> None:
 
                 if show_chart == "y":
                     plot_transactions(df)
+                    plot_transactions_subcategories(df)
 
         elif choice == "3":
             print("Exiting...")

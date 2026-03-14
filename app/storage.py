@@ -10,11 +10,12 @@ def initialize_csv() -> None:
         df = pd.DataFrame(columns=COLUMNS)
         df.to_csv(CSV_FILE, index=False)
 
-def add_entry(date: str, amount: float, category: str, description: str) -> None:
+def add_entry(date: str, amount: float, category: str, subcategory:str, description: str) -> None:
     new_entry = {
         "date": date,
         "amount": amount,
         "category": category,
+        "subcategory": subcategory,
         "description": description,
     }
 
